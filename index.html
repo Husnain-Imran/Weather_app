@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Weather app</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <!-- <input type="text" class="search-bar" placeholder="Enter city name" id="search-bar"> -->
+             <h1>Find the Weather → </h1>
+            <button class="search-btn" id="btn-search"> <img src="images/search.png" > </button> 
+        </div>
+        <div  id="error1">
+            <p>
+                invalid city
+                <h1>404 Not Found</h1>
+            </p>
+
+        </div>
+        <div  id="loader1"></div>
+        <div class="weather">
+            <img src="images/clear.png" class="weather-icon">
+            <h1 class="temp">40°C</h1>
+            <h2 class="city">Lahore</h2>
+            <div class="details">
+
+                <div class="col">
+                    <img src="images/humidity.png" alt="">
+                    <div>
+                        <p class="humidity" id="humidity">50%</p>
+                        <p>humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="images/wind.png" alt="">
+                    <div>
+                        <p class="wind" id="wind-speed">5km/h</p>
+                        <p>wind speed </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+ 
+            
+           
+
+    </div>
+     <div id="myModal" class="modal">
+                
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Search for the city Weather</p>
+                    <input type="text" class="search-bar" placeholder="Enter city name" id="search">
+                    <div class="err-invalidCity">
+                            <p id="err-city">
+                                invalid city
+                            </p>
+                        </div>
+                    <div class="btn-container">
+
+                        
+                        
+                        <button id="cancel-btn">cancel</button>
+                        <button id="search-btn">
+                            <span id="search-text">Search</span>
+                            <span class="loader" id="loader2" style="display: none;">
+                                
+                            </span>
+                        </button>
+                    </div>
+                </div>
+           
+        </div>
+
+
+    <script src="./script.js">
+   
+    </script>
+</body>
+
+</html>

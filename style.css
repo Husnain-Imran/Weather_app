@@ -1,0 +1,267 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: 'popins', sans-serif;
+    box-sizing: border-box;
+}
+body
+{
+    background: #222;
+}
+
+.card
+{
+    width: 90%;
+    max-width: 470px;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    position: relative;
+
+}
+.search
+{
+    display: flex;
+    background-color: transparent;
+    /* border: 2px solid #fff; */
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 6px;
+
+}
+.search input
+{
+    /* width: 80%; */
+    border: 0;
+    outline: 0;
+    padding: 10px 25px;
+    color: #555;
+    background: #ebfffc;
+    border: none;
+    outline: none;
+    /* background: transparent; */
+    font-size: 18px;
+    height: 50px;
+    width: 80%;
+    border-radius: 30px;
+    
+}
+.search button
+{
+    background: #fff;
+    color: #000;
+    border: none;
+    /* padding: 1px 8px ; */
+;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+
+    /* border-radius: 20px; */
+}
+.search button img
+{
+    width: 16px;
+}
+
+.weather-icon
+{
+    width: 160px;
+    margin-top: 30px;
+}
+.weather h1
+{
+    font-size: 80px;
+    font-weight: 700;
+}
+.weather h2
+{
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+.details
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+.col{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.col img 
+{
+    width: 40px;
+}
+.wind  , .humidity
+{
+    font-size: 28px;
+    margin-top: -6px;
+}
+
+.weather
+{
+    display: none;
+}
+#error1
+{
+    opacity: 0;
+    margin-top: 10px;
+    margin-left :10px;
+}
+.modal {
+  display: none; 
+  position: absolute; 
+  z-index: 1;
+  left: 400px;
+  top: 55px;
+  width: 40%; /* Full width */
+  height: 40%; /* Full height */
+  overflow: auto; 
+  
+  
+ 
+}
+#myModal{
+    display: none;
+}
+
+.modal-content {
+  position :absolute;
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Width as needed */
+  max-width: 400px; /* Max width to control size */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  top: 50px;
+  left: 80px;
+ 
+  
+  
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-content p{
+    color: #000;
+    margin-left:2px ;
+
+}
+.modal-content input{
+
+    border: 0;
+    outline: 0;
+    padding: 10px 25px;
+    color: #555;
+    background: #ebfffc;
+    border: none;
+    outline: none;
+    /* background: transparent; */
+    font-size: 18px;
+    height: 50px;
+    width: 80%;
+    border-radius: 30px;
+    margin-top: 10px;
+
+}
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px;
+
+}
+#cancel-btn{
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 60px;
+    color: white;
+    cursor: pointer;
+  
+
+}
+
+#search-btn{
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 60px;
+    color: white;
+    cursor: pointer;
+}
+
+.loader {
+ display: none;
+  border: 2px solid #f3f3f3; 
+  border-top: 2px solid #3498db; 
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.modal-container{
+    display: flex;
+    background-color: red;
+    width: 100vh;
+    z-index: 1;
+    
+
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px; 
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.err-invalidCity p{
+    display: none;
+    color: red;
+    margin-top: 4px;
+}
+#search-btn.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+
+
